@@ -1,0 +1,422 @@
+\documentclass[a4paper,10pt,oneside,onecolumn]{article}
+\usepackage[utf8]{inputenc}
+% \usepackage{times}
+\usepackage{a4wide}
+\usepackage[T1]{fontenc}
+% \usepackage[pdftex,a4paper]{geometry}
+\usepackage[pdftex,a4paper, total={15.4cm,23cm}, top=3.8cm, left=2.8cm, includefoot]{geometry}
+\usepackage{array}
+\usepackage{times,colordvi,epsfig,float, colortbl,multicol, xcolor}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{framed}
+% \usepackage[dvips]{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{picinpar}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% \usepackage[dvips, bookmarks, colorlinks=true, plainpages = false, 
+% citecolor = green, urlcolor = blue, filecolor = blue] {hyperref}
+
+% \textwidth 16.2cm
+% \oddsidemargin 1.8 cm
+% \hoffset -0.7cm
+% \voffset -1.4cm
+% \textheight 23cm 
+
+\usepackage{color}
+  \usepackage[colorlinks,hyperindex,plainpages=false,pdftex, linkcolor=black,citecolor=black,urlcolor=black,pagecolor=black]{hyperref}
+  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajù kolem odkazù
+  \pdfcompresslevel=9
+
+\newcommand{\degree}{\ensuremath{^\circ}}
+\newcommand\uv[1]{\quotedblbase \,#1\textquotedblleft}
+% Title Page
+\title{}
+\author{Kateřina Bartošková}
+
+% \usepackage[dvips]{hyperref}
+
+\date{2010-09-21}
+
+\renewcommand{\headrulewidth}{0.5pt} % tloušťka linky
+
+% \fancyhf{} % smaže aktuální nastavení záhlaví a zápatí
+% \fancyhead[LE,RO]{\bf } 
+% \fancyhead[LO]{\bfseries\rightmark}
+% \fancyhead[RE]{\bfseries\leftmark}
+\lhead{Kateřina Bartošková}
+\rhead{{{Brno PhD talent}}}
+\renewcommand{\headrulewidth}{0.7pt} % tloušťka linky
+\renewcommand{\footrulewidth}{0pt}   % patička chybí
+% \addtolength{\headheight}{1.2pt} % prostor pro záhlaví
+
+\makeatletter % @ se stane aktivnim znakem
+\renewcommand\thesection {\thechapter\@Roman\c@section}
+\makeatother  % @ se bude chovat jako obvykle
+
+
+% \textwidth 15cm
+% \oddsidemargin 1.8 cm
+% \hoffset 0.1cm
+% \voffset 0.3cm
+
+% \textwidth 20cm
+% \hoffset -2.35cm
+
+\begin{document}
+\begin{center}
+% \huge{\textsc{Scientific project}}\\
+\vspace{-2cm}
+\huge{\bf N-body simulations of galaxy mergers:\\ the role of stellar evolution feedback}\\
+% the role of gas in the evolution\\ of minor merger system
+\medskip
+\large{Applicant: {Mgr. Kateřina Bartošková}}\\
+\large{Supervisor: RNDr. Bruno Jungwiert, Ph.D.}
+\end{center}
+\noindent\hrulefill
+
+\textbf{Key words:} galaxy formation and evolution; galaxy collisions and mergers; elliptical galaxies; N-body simulations; dark matter; stellar evolution; stellar mass-loss; stellar feedback; active galactic nuclei (AGN); quasars; massive black-holes (BH); fueling BH growth; AGN feedback; 
+
+\section{Objectives and original contribution of the project}
+
+
+
+
+% So present time can be the end of simulation. 
+
+
+% -- Asi nejake uvodni vety o temne hmote, AGN (active galactic nuclei), ISM/IGM a slupkovych galaxiich... Uvest informace o pozorovanych hmotnych galaxiich, ktere tyto prvky spojuji (quasar MC2 1635+119 + obrazek?)...\\ $\Lambda$-CDM (Cold dark matter) -- hierarchical scenario: Nowadays galaxies are merger remnants   \\
+
+% -- N-body simulace -- silny nastroj na numericke reseni n-body problemu, ktery pomaha objasnovat mnohe dnesni otazky fyziky... \\
+
+% -- prejit k cili projektu (aim of the project):  N-body simulation of a minor merger between a giant elliptical (gE) galaxy and a satellite dwarf galaxy -- study of the system evolution... \\ 
+% massive galaxies are to be product of merger history
+% -- podle CMD teorie (viz kosmolog. simulace)
+% , thus have often maji tedy mnohdy bohatou srazkovou minulost..
+
+% numerouse massive galaxies are formed from smaller building blocks, thus are often a rich history of withholding
+\paragraph{Background}
+Large-scale cosmological simulations of galaxy formation and evolution are a key topic of the current research in astrophysics. Essential ingredients involve gravitational dynamics of dark matter and the complex physics of baryonic matter (gas and stars). 
+
+The former has been a subject of huge advances within the last decade, leading, when combined with observational constraints, to a picture of hierarchical structure formation in the Universe. According to the hierarchical scenario -- today referred to as $\Lambda$ Cold dark matter ($\Lambda$-CDM) theory -- more massive objects are formed from smaller building blocks. Today's elliptical galaxies are considered as remnants of a major galaxy merger (collision of two roughly equal mass disk galaxies) or even series of accrections of smaller galaxies and minor mergers (accrection of two differently massive galaxies), which are much more common. Some of them became massive central galaxies and are continuing to grow by "galactic cannibalism" (by swallowing up much smaller satellite objects bound in gravitational potential of the giant galaxy). More detailed observations in recent years are revealing more and more evidences of past and present galactic interactions in agreement with the hierarchical theory. 
+
+% (Springel 2005; GAlaxies with Dark matter and Gas intEracT)Vyjmenovat nektere zajimave pozorovane jevy, ktere se dnes povazuji za dukazy (slupky, tidals, rozlozeni plynu, aktivita AGN...). (citation needed)
+
+The physics of baryonic matter, involving star formation and stellar evolution in connection with the surrounding environment (galactic evolution), is however much less understood in details due to issues related to finite spatial and mass resolutions in N-body gas-dynamical simulations as well as to a considerable degree of ignorance about the nature of the underlying physical processes.
+
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+\fcolorbox{black}{violet!1!white}{\parbox[t][7.2cm][c]{9.1cm}{
+
+  \vspace{-19.5pt}
+  \begin{center}
+    \includegraphics[width=9cm]{mapgraf_shells4.png}\label{40}
+  \end{center}
+  \vspace{-12pt}
+  {In my master thesis I already dealt with the N-body simulations of minor merger system, a head-on collision of giant elliptical (gE) and dwarf elliptical (dE) galaxy, using the code GADGET-2 in Newtonian space. Initial conditions contain a combination of stellar and dark matter models for representation of massive galaxiy, approaching the observed objects. The simulation (see the picture above -- evolution of surface density distribution of star particles of the smaller galaxy during the simulation) led to successful reproduction of a shell galaxy -- the observed phenomenon of many elliptical galaxies. The original results were presented as a poster at the conference JENAM 2010.}
+  \vspace{-6pt}
+}}
+\end{wrapfigure} The massive  black holes (SMBH),  common in galaxy centers  and giving 
+rise to active galactic nuclei (AGN) are another piece of the galaxy evolution puzzle, involving the AGN fueling by the matter of the host galaxy and the AGN,  energetic feedback on the interstellar and intergalactic media (ISM and IGM). 
+
+The current state-of-the art N-body models of galaxy evolution
+incorporate a rather complex treatment of the baryonic physics:
+multi-phase ISM, turbulence, supernova feedback, AGN feedback, 
+gravitational instabilities, ISM cooling/heating, star formation. 
+% Simulations taking into account various combination of the mentioned effects at various levels of approximation  The amount of gas in galaxies is critical for their black hole fueling and the structural properties of the remnant (Hopkins).
+
+
+
+
+% The former has been a subject of huge advances within the last decade, leading, when combined with observational constraints, to a picture of hierarchical structure formation in the Universe, today referred to as Lambda-CDM cosmology. Under this scenario, galaxy formation proceeds by merging, from smaller to larger structures, dwarf galaxiesbeing formed first and the giant ones the last.
+
+
+
+
+
+% However not all of these effects are well understood by theoretical predictions. 
+% Pozorujeme mnohe galaxie, ktere vykazuji otisky/dukazy drivejsi merger minulosti at v podobe ruzne aktivnich AGN, pozorovanych luminouse star structure (napr. slupky) or   (to je treba asi nejak podlozit, taky rict, o nejake dnesni predstave)\\
+
+% The current state-of-the art N-body models of galaxy evolution incorporate a rather complex treatment of the baryonic physics: multi-phase ISM, turbulence, supernova feedback, AGN feedback, gravitational instabilities, ISM cooling/heating, star formation.  
+
+% The amount of gas in galaxies is critical for their black hole fueling and the structural properties of the remnant
+% Mergers Drive Strong Gas Inflows, causing Starbursts and Fueling BH Growth (Hopkins).
+
+The goal of this project, described in detail in the next section, is
+to explore the role of the long-term stellar mass-loss on galaxy 
+evolution in the context of the hierarchical galaxy formation.
+
+
+
+% -- Minor mergery + environment\\
+% -- Gravitacni N-casticove simulace pomahaji predikovat a objasnovat chovani systemu od kosmologickych struktur, pres galaxie a hvezdokupy, az po nejmensi planetarni soustavy (aji planetky)\\
+%  (Springel 2005; GAlaxies with Dark matter and Gas intEracT)
+ 
+
+% -- Jiz ve sve diplomove praci jsem se zabyvala N-casticovymi simulacemi minor mergeru a podarilo se mi vytvorit slupkovou strukturu vzeslou z prime srazky gE a dE galaxie. Pocatecni podminky obsahuji hvezdnou i temnou hmotu pro reprezentaci masivni galaxie, priblizuji se tim pozorovanym objektum. Originalni vysledky prace byly prezentovany formou posteru na konferenci JENAM 2010. (pouzivam ponekud nadneseny styl, aby jsme to prodali:); nevim ale, jestli tam neco takoveho davat) \\
+% -- GADGET2 neco o nem a jeho "uspechy", a ze ho uz pouzivam -- nebo az do nasledujici sekce, kde o nem mluvim?\\
+% -- consists of giant elliptical galaxy (gE) and dwarf satellite galaxy (dE/dSph...) -
+% -- Muzu rici, ze je to rozsireni diplomove prace ve smyslu realisticnosti minor mergeru a rozsireni studovaneho problemu...?  Studium parametru poc. podminek atd.\\
+
+
+\paragraph{The project}
+
+% During the project, the applicant will The goal of the project is a detailed study of evolution of a merger systems in higher resolution and in redshift range from $z\sim2$ to $z=0$ (today; *muze to byt tak dlouho*?, *Zkontrolovat datovani AGN*). That takes in time approximately about $1 \cdot 10^{10}$ yr evolution (lookback time). 
+
+The long-term stellar mass-loss from low-mass and intermediate mass-stars
+is a known but largely unexplored aspect of stellar evolution feedback on 
+galaxy evolution. Its first implementations into N-body codes of galactic
+evolution are due to Jungwiert et al. (2001) and Lia et al. (2002), the 
+former being formulated in a deterministic way while the latter relying 
+on a probabilistic description. However, surprisingly little work on the 
+topic has been done since, and most current simulations of galaxy evolution
+largely ignore and probably underestimate the effect of the mass-loss
+on galaxy structure/dynamics, star formation rate and gas consumption 
+timescale.
+
+Recently, Martig \& Bournaud (2010) have revived the subject by
+showing the overwhelming importance of the long-term stellar 
+mass-loss in large scale simulations of disk galaxies, in particular
+on the formation of bulges and resulting bulge-to-disk ratios. They have
+speculated that the long-term stellar mass-loss might be a key ingredient
+in current cosmological simulations that fail to produce realistic 
+late-type disk galaxies.
+
+
+Motivated by these recent advances in the field, we have decided
+to explore the effects of stellar mass-loss in another cosmologically 
+crucial context, namely that of galaxy mergers. We intend to focus
+predominantly, though not uniquely, on elliptical galaxies, both
+giant and dwarf. Elliptical galaxies have mostly old stellar 
+populations, formed largely by redshift 2 (lookback time $\sim 1 \cdot 10^{10}$ yr\footnote{Assuming Hubble constant $H_0 \sim 70.5$ km/s/Mpc, and the cosmological parameters $\Omega_{\mathrm{matter}} \sim 0.27$ and $\Omega_{\Lambda} \sim 0.73$.})
+and evolving passively since. This passive evolution is accompanied
+by stellar mass-loss, potentially accumulating a huge gas reservoir
+in these galaxies. The fate of such gas in galaxy collisions and mergers
+was never studied so far, to our knowledge. We suspect, that a lot
+of so called "dry mergers" (mergers of gas-poor galaxies) are not so
+dry in reality. 
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+\fcolorbox{black}{violet!1!white}{\parbox[t][9.5cm][c]{4.2cm}{
+
+  \vspace{-17pt}
+  \begin{center}
+    \includegraphics[width=4cm]{hs-2007-39-c-full_jpg.jpg}\label{40}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Image taken with Hubble Space Telescope shows the quasar, known as MC2 1635+119 (Canalizo G., Bennert N., Jungwiert B., et al., 2007, ApJ 669, 801), and its host galaxy together with the star shells structure. Is there any connection of these phenomenas? Are they pointing to the same merging event in the past of the galaxy?}
+  \vspace{-6pt}
+}}
+\end{wrapfigure}
+the applicant will work on detailed study of evolution of merger systems in high resolution and in redshift range from $z\sim2$ to $z=0$ (cosmological treatment will include simulations from from $z \sim 5$). That takes in time approximately about $1 \cdot 10^{10}$ yr evolution (lookback time). 
+
+In the course of the project, I will be using a freely available and renowned code GADGET-2 (Springel 2005; GAlaxies with Dark matter and Gas intEracT) for self-consistent cosmological N-body simulations, a very versatile modeling tool (involving effective TreePM method for stars and dark matter and the TreeSPH algorithm for gaseous particles in various resolutions and metrics). The published version does not consider the transfer of mass between stars and gas, however, due to its vast possibilities, we decided to use this code and to modify it for the purpose of the project.\\
+
+% Behem reseni projektu budu pouzivat mezi vedeckou verejnosti siroce uznavany freely available code GADGET-2 (Springel 2005; GAlaxies with Dark matter and Gas intEracT) for self-consistent cosmological N-body simulations, ktery je velice vsestrannym nastrojem (zahrnuje efektivni TreePM pro hvezdy a temnou hmotu a TreeSPH pro plynne castice v ruznem rozliseni a v ruznych metrikach...). Publikovany kod ale neuvazuje prenos hmoty mezi stars and gas, ale vzhledem k jeho rozsahlym moznostem we desided to use this code and modify it cor the purpose of the project.  
+
+% -- Vyzdvihnout roli plynu a propojeni hmoty -- "chemie" bude soucasti projektu... Popsat co cekame behem simulaci a dodat literaturu...\\ 
+
+
+% -- Ackoliv je GADGET2 velice vsestranny nastroj (zahrnuje efektivni TreePM pro hvezdy a temnou hmotu a TreeSPH pro plynne castice v ruznem rozliseni a v ruznych metrikach...), publikovany cod neuvazuje se prenos hmoty mezi jednotlivymi uvedenymi "typy hmoty".
+
+% Jedna se napriklad o ztratu hmoty hvezd (hvezdny vitr, planetarni mlhoviny, SN feedback) nebo naopak SF, ci dalsi efekty jako je zapaleni AGN, jejich fuelling apod.  (neslo by to diskutovat s puvodnim autorem, ci pozadat o uvolneni modifikaci? Vetsinu z toho uz totiz nekdo implementoval, ale zase muze jit o stare veci...)   (nevim jestli bych se nemela pak podivat i na nejake jine kody, treba i ty pouzivajici gpu; ono je taky problem ze uz je gadget3, ale ne a ne se uvolnit:))
+
+
+
+% Serie clanku o AGN a plynu v simulacich (spojeni s GADGETem):\\ \href{http://adsabs.harvard.edu/cgi-bin/basic_connect?qsearch=springel+Di+Matteo+Hernquist+2005&version=1}{http://adsabs.harvard.edu/cgi-bin/basic\_connect?qsearch=springel+Di+Matteo+Hernquist+2005\&version=1}\\
+
+Overall contribution and goals of the project:
+\begin{itemize}
+ \item \vspace{-0.3cm} Connect nowadays information from observations and theoretical studies with galaxy evolution predicted by N-body simulations in the CMD universe -- galaxy mergers evolved in cosmological environment.
+%  The main point is approach to, as much as possible, realistic interpretation and reproduction of comprehensive phenomenas in the galaxy evolution. Of course this approach will also contribute to testing validity of Cold dark matter theory (CMD).
+\item \vspace{-0.3cm} Our main astrophysical goal is to explore whether the gas return from stars, accumulated over long periods, can provoke, during mergers, starbursts and increased AGN fueling.
+ \item \vspace{-0.3cm} Source code of the patch implementing mass-loss into the code of GADGET-2, created during solving of the project, will be released for free usage by the astronomical community using GADGET or other galaxy evolution codes.
+
+%  \item Of course this approach will contribute to testing validity of Cold dark matter theory (CMD).  Without succesfully answering on scientific questions and reproducing observer phenomenas/object, no theory can be treated as $100 \%$ valid.
+
+
+
+\end{itemize}
+
+% -- Vysledky mohou pomoci k objasneni... to jeste promyslet na zaklade clanku:)\\
+% -- high resolution\\
+% -- Connect nowadays information from observations and theoretical study with galaxy evolution predicted by N-body simulations in the CMD universe. The main point is approach to, as much as possible, realistic interpretation and reproduction of comprehensive phenomenas in the galaxy evolution. 
+% within the bounds of todays computing and physics science
+% -- Of course this approach will contribute to testing validity of Cold dark matter theory (CMD).  Without succesfully answering on scientific questions and reproducing observer phenomenas/object, no theory can be treated as $100 \%$ valid.
+% -- Source code of the patch enhancing GADGET-2, created during solving of the project, will be released for free usage.
+
+% There are not known simulations of mergers in that high resolution, which are    \\
+% -- Vznikly patch pro program GADGET2 by byl uvolnen pro sirsi pouziti (snad by sla i spoluprace s MB?) na dalsi temata.\\
+
+% Napriklad dnesni vysledky, zahrnujici ztratu hmoty v simulacich vyvoje diskovych galaxii predikuji znacny
+
+% \bigskip
+\newpage
+\section{Theoretical framework, applied methods and techniques,\\ basic references}
+
+
+\paragraph{Initial conditions and simulations}
+% As preliminary results from diploma thesis and logical assumptions indicate,  
+A distribution of matter (gravitational potential) of a giant galaxy takes important role in the evolution of the minor merger system. To keep consequent simulations realistic as much as possible, when constructing initial galactic models, we need to take into account current constraints on dark and baryonic matter -- from observations of real galaxies and cosmological N-body simulations. (i.e. density models -- NFW halo, Sersic law etc.).
+% -- zamysleni pouzit "snapshot" z kosmologickych simulaci od urciteho z (2?) -- dark matter/IGM (environment pro merger -- pridani v pozdejsi fazi projektu?) -- budeme primo uvazovat o field/void?\\
+
+We intend to use a snapshot from cosmological simulations from a higher redshift ($z \sim 5$) to initialize the~dark matter; subsequently we will add the baryonic matter and follow the evolution of all the three components, using zoom techniques (see below) to increase the resolution in the central parts.
+
+% A part of the study will be searching in parameter space of initial configuration between chosen galaxies. Besides their initial mass ratio and intristic parameters, discussed above, significant effect on the evolution of the system has relative velocity and initial orbit parameter of satellite galaxy. For the topic of project purpose, near radial collisions should be favor.\footnote{In fact, the better is to choose exactly head-on collision, at least in the beginning of study, because that simplifies the problem in case of understanding different physical effects acting during the simulation (i.e. effect of dynamical friction, gas stripping from less massive companion etc.). 
+% But exact a head-on collision can not be accomplished because of numerical treatment and nonsmooth potential of finite number of particles.
+% }    
+% -- precist jeste literaturu
+
+
+
+% \paragraph{Stellar mass loss}
+% Popsat zamyslenou modifikaci gadgetu (stellar mass loss, (star formation), AGN fuelling...). (mohla bych citovat Brunuv nejaky clanek?:)...)
+
+% pozn: Pokud je ta giant galaxie remnant major mergeru (nebo i postupne z minor merg.) musela se pro nase ucely zformovat jeste pred z~2. Podle Martig/Bournaud je populace hvezd pak uz docela stara (u monir merg. by snad ale nemusela byt) aby mel mass loss vyraznejsi vyznam... Ale resili to z hlediska "sily" disku, asi tez zalezi na meritku... Taky ten plyn se scita s tim odebranym ze satelitu a kdyz je nejaky infall z mezigalaktickeho plynu (na JENAMU rikali, ze gas-stripping pak dotuje SF centralni galaxie, takze tam mohou byt i ruzne populace, ale casto zminovali clustery, a je tez kvuli SF potreba cooling mechanismus ale tomu moc zarim nerozumim), tak by to nemuselo byt zanedbatelne... Jeste me napada, ze bychom mohli delat monor merger s gas poor a gas rich sekundarem (ruzni trpaslici nebo i diskova galaxie) a porovnavat vysledne simulace...\\
+
+\paragraph{Numerical realization of N-body simulations}
+As already mentioned, numerical treatment of the system evolution will be computed by N-body tool GADGET-2. We are going to use a "zoom-in" techniques to aquire a higher resolution within the computational bounds: Simulations for searching in parameter space and cosmological simulations will be treated in less precision. For the purpose study of merging mechanisms and hereafter central AGN feedback, we could use a snapshot from the former simulations and partially resimulate the chosen region in a more detail.
+% %  GADGET2 (Springel V., 2005, MNRAS 364, 1105, GAlaxies with Dark matter and Gas intEracT):
+% 
+% We want to use 
+
+Because of high resolution requirements (large number of particles and accuracy needs in high density areas) the simulations are to be cpu-time consuming. Parallel codes naturally favor computation on clusters or multi-processor blade servers, etc. For the purpose of higher resolution I have gained access to OCAS (Ond\v{r}ejov Cluster for Astrophysical Simulations). Other possibility, in the near future, may be to use a MetaCentrum (an activity of CESNET association) resources (e.g. usage of multiprocessor machines or clusters at the Faculty of informatics MU), which are available for persons from academic environment.
+
+\subsection*{References}
+Springel V., 2005, MNRAS 364, 1105; Ho, Luis C., 2009, ApJ 699, Issue 1, 626-637; Lia C., Portinari L., Carraro G., 2002, MNRAS 330, 821; Jungwiert B., Combes F., Palous J., 2001, A\&A 376, 85; Martig M., Bournaud F., 2010, ApJ 714, 275; Hopkins P. \& Quataert E., 2010, MNRAS 407, 1529
+
+\section{Time schedule and key milestones of the project}
+\begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} \bf Academic Year & \vspace{-0.2cm} \bf Milestones \\
+{\bf{2010/2011}} &  \multirow{2}{*}{}Study present state of gas treatment in N-body simulations and prepare some preliminary simulations of galaxy mergers without stellar feedback,\\
+& Become more closely familiar with stellar mass loss treatment across stellar populations and start implementing the modification of GADGET-2. 
+ \end{tabular}
+\begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2011/2012}} & \vspace{-0.2cm} Simulations with stellar feedback; Cosmological simulations -- environment;\\
+& Publication of the code GADGET-2 modifications; study AGN-feedback.
+ \end{tabular}
+ \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2012/2013}} & \vspace{-0.2cm} Detailed analysis of various classes of merger simulations with stellar mass-loss feedback.\\
+ \end{tabular}
+ \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2013/2014}} & \multirow{2}{*}{}Publish papers to international conferences and high impact factor international journals.\\
+ & Write a PhD dissertation using the project results and related topics. \vspace{-0.2cm} 
+ \end{tabular}\\
+\smallskip 
+
+\noindent\textbf{During the all project stages:} The applicant will participate in summer schools, conferences and workshops related to galaxy evolution and computing. Results obtained during the project solving will be published throughout all stages. 
+
+\begin{comment}
+ -- Uvest asi podobny timing jako v ramcovem planu? 
+
+Co takhle tabulku (nekde jsem to tak videla):
+
+Time schedule of individual milestines is organised according to semester system:
+\begin{table}[h]
+\begin{center}
+% \rule{\textwidth}{0.5mm}
+% \vskip 0.5cm
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lp{10cm} l}
+\bf Semester &  \bf milestones &  \bf Status\\ \hline \hline
+\bf 2010 Autumn & \multirow{2}{*}{}$\bullet$ Conduct preliminary research; study present state of gas treatment in galaxy merger simulations, (dark matter and AGN problematic); formation of gE from theoretical as well as observational point of view. & Ongoing \\
+& $\bullet$ Present results from the master thesis on international conference. (Already accomplished: poster on JENAM 2010) & Done \\ 
+& $\bullet$ Practical work: Extend the master thesis project (in collaboration with Ivana Ebrova and Lucie Jílková)... &  Ongoing \\ \hline
+% 
+\bf 2011 Spring & \multirow{2}{*}{}$\bullet$ Continue with preliminary research... & Planned \\
+& $\bullet$ Present results from the fist stages of the project on international conference. (e.g. JENAM 2011) & Planned \\ & $\bullet$ Participate in a summer school...  & Planned\\ \hline
+% 
+\bf 2011 Autumn  & \multirow{2}{*}{}$\bullet$  & Planned \\
+& $\bullet$  & Planned \\ & $\bullet$   & Planned\\ \hline
+% 
+\bf 2012 Spring  & \multirow{2}{*}{}$\bullet$  & Planned \\
+& $\bullet$  & Planned \\ & $\bullet$   & Planned\\ \hline
+% 
+\bf 2012 Autumn   & \multirow{2}{*}{}$\bullet$  & Planned \\
+& $\bullet$  & Planned \\ & $\bullet$   & Planned\\ \hline
+% 
+\bf 2013 Spring  & \multirow{2}{*}{}$\bullet$  & Planned \\
+& $\bullet$  & Planned \\ & $\bullet$  & Planned\\ \hline
+% 
+\bf 2013 Autumn  & $\bullet$ Submit paper to an international conference or international journal. &  Planned\\ \hline 
+% 
+\bf 2014 Spring  & $\bullet$ Write PhD dissertation using the project results.  &  Planned\\ \hline \hline
+\end{tabular*} \label{tab1}
+% \caption{\small }
+\end{center}
+\end{table}
+
+
+
+% -- mozna ale spis chteji opacny postup: jednotlive kroky/
+\end{comment}
+
+
+
+\bigskip
+\newpage 
+\section{Institutions where the project will be implemented}
+The project will be carried out jointly at two collaborating
+institutions, the {\bf{Institute of Theoretical Physics and Astrophysics}}, Masaryk University in Brno (hereafter UTFA; home institution of the PhD study), and the
+{\bf{Astronomical Institute of the Academy of Sciences of the Czech Republic.}}\footnote{The applicant has succeeded, in June 2010, in a competition for a part-time (25\%) PhD position at the Astronomical Institute ASCR (from 1.10 2010 to 30.9. 2011). In this framework, AsU has agreed to provide to the access to its computer facilities, including its linux cluster for large astrophysical simulations, located at the Ond\v{r}ejov observatory.}
+(hereafter AsU). 
+% K. Barto\v{s}kov\'{a}
+
+The immediate working environment will consist of an informal
+Prague (AsU) -- Brno (UTFA) working group on AGN host galaxies,
+lead by B. Jungwiert. The group meets regularly, on a weekly basis, since
+2007 (the applicant actively participates since 2009). The group involves PhD (presently 5, including the applicant) and
+undergraduate students as well as one postdoctoral researcher (I.
+Stoklasov\'{a}), and has strong collaborative ties with foreign astronomical
+institutions (e.g. Dr. Giovanni Carraro, European Southern Observatory
+(ESO\footnote{ESO (\href{www.eso.org}{www.eso.org}) is an intergovernmental organization for astronomical research, involving 14 European countries, and operating the largest astronomical telescopes in the world; the Czech Republic is member since 2007}), Santiago, Chile; Dr. G. Canalizo, University of
+California-Riverside; Dr. N. Bennert, University of California-Santa
+Barbara; Dr. S. Sanchez, Calar Alto Observatory, Spain).
+% -- Nevim jestli by nemelo byt uvedeno field of study i zde...
+
+
+% \begin{enumerate}
+%  \item ÚTFA PřF MU Brno, Kotlářská 2, Brno -- Astrophysical section:  The training institution mainly focus on particular problems in physics of hot stars and systems of stars with hot components. 
+% \item Astronomický ústav AV ČR, v.v.i., Boční II 1401, Praha 4: Uvest, ze jde o moje druhe pracoviste, kde mam castecny uvazek od 1.10., a o pracoviste skolitele? Uspechy "Pidiskupiny"? Nebo i neco obecne o galakticke sekci...
+% 
+% % asi jako jedina studuje dnes problematiku slupek podrobneji v ramci novejsich poznatku a prisla s navrhem mapovani rozlozeni temne hmoty ve vzdalenych castech eliptickych galaxii pomoci kombinace spektroskopickeho pozorovani a semi-analytical simulations. 
+% \item nejaka staze nebo externi spoluprace?:) 
+% \end{enumerate}
+
+\section{Expert consultants and their contribution to the project}
+% {Supervisor: RNDr. Bruno Jungwiert, Ph.D.} 
+The supervisor, \textbf{Dr. Bruno Jungwiert}, is a staff researcher at AsU and external
+lecturer at UTFA. He is currently supervising/advising 2 other
+PhD students at UTFA and 2 PhD students at the Charles University, as
+well as several diploma/bachelor students.
+
+% \subsubsection*{Colaborates and consultants:}
+\textbf{Dr. Giovanni Carraro}, staff researcher at the European Southern
+Observatory (ESO\footnotemark[3]) in Chile, and a co-author of one of the N-body schemes for
+stellar mass-loss (Lia, Portinari, \& Carraro 2002) will be a consultant
+of the project. He is already involved in co-advising, together with B.
+Jungwiert, another PhD project involving a PhD student at UTFA, Ms. Lucie
+J\'{i}lkov\'{a}, currently on a 2-year leave in ESO.
+
+% -- Nemam zde vyjmenovat i cleny pidiskupiny, ze jde o spolupraci v ramci pidi?
+
+\section{Relation between the applicant's project and doctoral thesis}
+The project is tightly connected with and significantly extends the topic of PhD thesis: \textit{N-body simulations of~galaxy mergers}, which is targeting minor mergers. In addition, the project will be interested in major mergers.  
+
+\section{Motivation for solving the project}
+Tracking the galactic evolution is one of the most evolving tasks today's astrophysics. I am interested in the~issue of elliptical galaxies since my bachelor thesis project and in~the~field~of N-body computing since my master thesis. This project is a great way to combine a scientific work on astrophysical phenomenas, which I~am interested in, with computational informatics, which is my second main interest.
+
+% To fakt nevim, co sem napsat... Neco jako treba, ze se eliptickym galaxiim venuji uz od bakalarky, v diplomce jsem se seznamila s N-casticovymi simulacemi problematiky jejich srazek a ze chci pokracovat ve sve specializaci v ramci dnesnich usolved questions...   Ze to je skvely zpusob jak zkloubit vedeckou cinnost (studium fyzikalnich ) with computational informatics, ktera me tez bavi a zajima... ??? 
+
+
+\bigskip
+\bigskip
+\bigskip
+\begin{tabular}{p{7cm}p{7cm}}
+ elaborated by: & approved by:
+\end{tabular}
+
+
+\end{document}
