@@ -1,68 +1,61 @@
-\documentclass[a4paper,10pt,oneside,onecolumn]{article}
-\usepackage[utf8]{inputenc}
-% \usepackage{times}
-\usepackage{a4wide}
-\usepackage[T1]{fontenc}
-% \usepackage[pdftex,a4paper]{geometry}
-\usepackage[pdftex,a4paper, total={15.4cm,23cm}, top=3.8cm, left=2.8cm, includefoot]{geometry}
-\usepackage{array}
-\usepackage{times,colordvi,epsfig,float, colortbl,multicol, xcolor}
-\usepackage{graphics}
-\usepackage{graphicx}
-\usepackage{framed}
-% \usepackage[dvips]{graphicx}
-\usepackage{amsmath}
-\usepackage{url}
-\usepackage{comment}
-\usepackage{picinpar}
-\usepackage{wrapfig}
-\usepackage{epsfig}
-\usepackage{multirow}
-\usepackage{fancyhdr}
-\usepackage{lettrine}
-\usepackage{natbib}
-\usepackage{multicol}
-\pagestyle{fancy}
+%% \documentclass[a4paper,10pt,oneside,onecolumn]{article}
+%% \usepackage[utf8]{inputenc}
+%% % \usepackage{times}
+%% \usepackage{a4wide}
+%% \usepackage[T1]{fontenc}
+%% % \usepackage[pdftex,a4paper]{geometry}
+%%\usepackage[pdftex,a4paper, total={15.4cm,23cm}, top=3.8cm, left=2.8cm, includefoot]{geometry}
+%% \usepackage{array}
+%% \usepackage{times,colordvi,epsfig,float, colortbl,multicol, xcolor}
+%% \usepackage{graphics}
+%% \usepackage{graphicx}
+%% \usepackage{framed}
+%% % \usepackage[dvips]{graphicx}
+%% \usepackage{amsmath}
+%% \usepackage{url}
+%% \usepackage{comment}
+%% \usepackage{picinpar}
+%% \usepackage{wrapfig}
+%% \usepackage{epsfig}
+%% \usepackage{multirow}
+%% \usepackage{fancyhdr}
+%% \usepackage{lettrine}
+%% \usepackage{natbib}
+%% \usepackage{multicol}
+%% \pagestyle{fancy}
+% -----
 
-% \usepackage[dvips, bookmarks, colorlinks=true, plainpages = false, 
-% citecolor = green, urlcolor = blue, filecolor = blue] {hyperref}
 
-% \textwidth 16.2cm
-% \oddsidemargin 1.8 cm
-% \hoffset -0.7cm
-% \voffset -1.4cm
-% \textheight 23cm 
+%% \usepackage{color}
+%%   \usepackage[colorlinks,hyperindex,plainpages=false,pdftex, linkcolor=black,citecolor=black,urlcolor=black,pagecolor=black]{hyperref}
+%%   \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajù kolem odkazù
+%%   \pdfcompresslevel=9
 
-\usepackage{color}
-  \usepackage[colorlinks,hyperindex,plainpages=false,pdftex, linkcolor=black,citecolor=black,urlcolor=black,pagecolor=black]{hyperref}
-  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajù kolem odkazù
-  \pdfcompresslevel=9
+%% \newcommand{\degree}{\ensuremath{^\circ}}
+%% \newcommand\uv[1]{\quotedblbase \,#1\textquotedblleft}
+%% % Title Page
+%% \title{}
+%% \author{Jaroslav Vážný}
 
-\newcommand{\degree}{\ensuremath{^\circ}}
-\newcommand\uv[1]{\quotedblbase \,#1\textquotedblleft}
-% Title Page
-\title{}
-\author{Jaroslav Vážný}
+%% % \usepackage[dvips]{hyperref}
 
-% \usepackage[dvips]{hyperref}
+%% \date{2011-09-22}
 
-\date{2011-09-22}
+%% \renewcommand{\headrulewidth}{0.5pt} % tloušťka linky
 
-\renewcommand{\headrulewidth}{0.5pt} % tloušťka linky
+%% % \fancyhf{} % smaže aktuální nastavení záhlaví a zápatí
+%% % \fancyhead[LE,RO]{\bf } 
+%% % \fancyhead[LO]{\bfseries\rightmark}
+%% % \fancyhead[RE]{\bfseries\leftmark}
+%% \lhead{Jaroslav Vážný}
+%% \rhead{{{Brno PhD talent}}}
+%% \renewcommand{\headrulewidth}{0.7pt} % tloušťka linky
+%% \renewcommand{\footrulewidth}{0pt}   % patička chybí
+%% % \addtolength{\headheight}{1.2pt} % prostor pro záhlaví
 
-% \fancyhf{} % smaže aktuální nastavení záhlaví a zápatí
-% \fancyhead[LE,RO]{\bf } 
-% \fancyhead[LO]{\bfseries\rightmark}
-% \fancyhead[RE]{\bfseries\leftmark}
-\lhead{Jaroslav Vážný}
-\rhead{{{Brno PhD talent}}}
-\renewcommand{\headrulewidth}{0.7pt} % tloušťka linky
-\renewcommand{\footrulewidth}{0pt}   % patička chybí
-% \addtolength{\headheight}{1.2pt} % prostor pro záhlaví
-
-\makeatletter % @ se stane aktivnim znakem
-\renewcommand\thesection {\thechapter\@Roman\c@section}
-\makeatother  % @ se bude chovat jako obvykle
+%% \makeatletter % @ se stane aktivnim znakem
+%% \renewcommand\thesection {\thechapter\@Roman\c@section}
+%% \makeatother  % @ se bude chovat jako obvykle
 
 
 % \textwidth 15cm
@@ -73,20 +66,21 @@
 % \textwidth 20cm
 % \hoffset -2.35cm
 
-\begin{document}
-\begin{center}
+%% \begin{document}
+
 % \huge{\textsc{Scientific project}}\\
-\vspace{-2cm}
+\vspace{2cm}
+\begin{center}
 \huge{\bf Virtual Observatory \& Data Mining:\\ Astronomy for 21 century}\\
 % the role of gas in the evolution\\ of minor merger system
 \medskip
-\large{Applicant: {Mgr. Jaroslav Vážný, Dis.}}\\
-\large{Supervisor: RNDr. Petr Škoda, Csc}
+\large{Applicant: {Jaroslav Vážný}}\\
+\large{Supervisor: RNDr. Petr Škoda, CSc.}
 \end{center}
 \noindent\hrulefill
 
-\noindent \textbf{Key words:} Astroinfomatics; Virtual Observatory; Data Mining;
-DAME; Machine Learning; Decision Trees; Neural Networks;Support Vector
+\noindent \textbf{Key words:} Astroinformatics; Virtual Observatory; Data Mining;
+DAME; Machine Learning; Decision Trees; Neural Networks; Support Vector
 Machines
 
 \section{Objectives and original contribution of the project}
@@ -104,23 +98,38 @@ also in complexity and dimensionality
 \cite{ballastroinformatics}. Astroinformatics is the new field of
 science which has emerged from this technology driven progress.
 Virtual Observatory, Machine Learning, Data Mining, Grid Computing are
-just few examples of new tools available to scientists. The
-astronomers are not alone and particle physics, biology and other
+just few examples of new tools available to scientists.  
+The astronomers are not alone and particle physics, biology and other
 sciences are also in the vanguard of the data intensive science. This
 is great opportunity for interdisciplinary collaboration.
 
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-\fcolorbox{black}{violet!1!white}{\parbox[t][4cm][c]{4cm}{
+%% \begin{wrapfigure}{r}{0.3\textwidth}
+%%   \vspace{-19.5pt}
+%%   \begin{center}
+%%     \includegraphics[width=4cm]{astroinformatics}\label{40}
+%%   \end{center}
+%%   \vspace{-12pt}
+%%   \vspace{-6pt}
+%% \end{wrapfigure} 
 
-  \vspace{-19.5pt}
-  \begin{center}
-    \includegraphics[width=4cm]{astroinformatics}\label{40}
-  \end{center}
-  \vspace{-12pt}
-  \vspace{-6pt}
-}}
-\end{wrapfigure} 
+The general goal of the project is to demonstrate the power of new
+concepts and technologies of computers science in the context of
+astrophysics. This project is a part of my long-term effort. During my
+bachelor work I developed a process for discovering new candidates of
+Blazars (super-massive black hole at the center of an galaxy) and in my
+master thesis I utilized technologies of Virtual Observatory and Data
+Mining to find new Be stars (rare, extremely rapid rotating stars). My
+reviewers were prof. Giuseppe Longo and Dr. Massimo Brescia. They are
+main figures behind the DAME project, one of the most important Data
+Mining projects in current astrophysics, and they invited us to work
+on common project. Since my supervisor has two more computer science
+students we are now team with expertise in different ares. This
+multidisciplinary international collaboration will be the basis for my
+work. The first goal will be the implementation of the Decision Tree
+algorithm in the DAME framework and its utilization in astrophysical
+research.
+
 
 \paragraph{The project}
 Main “vision” is to create a joined astrophysical data mining project
@@ -128,7 +137,7 @@ based on the DAMEWARE \footnote{DAME Web Application REsource}
 infrastructure and other DAME\footnote{DAta Mining \& Exploration:
   general purpose, Web-based, distributed data mining infrastructure
   specialized in Massive Data Sets exploration with machine learning
-  methods } resources.  The common work indeed has two distinct
+  methods } resources.  The common work  has two distinct
 aspects to be carried out:
 
 \begin{enumerate}
@@ -143,40 +152,25 @@ DAMEWARE and accessible by external users exclusively through its GUI (Graphical
 
 \item{Scientific:} 
 
-the goal is to exploit the DAMEWARE and other resources (either available or new), of DAME
-Program to perform astrophysical data mining experiments with public data coming out from VO, large
-programs or other warehouses.
+the goal is to exploit the DAMEWARE and other resources (either
+available or new), of DAME Program to perform astrophysical data
+mining experiments with public data coming out from Virtual
+Observatory, large programs or other warehouses.
 \end{enumerate}
 
 
 
-%% The general goal of the project is to demostrate the power of new
-%% concepts and technologies of computers science in the context of
-%% astrophysics. This project is a part of my long-term effort. During my
-%% bachelor work I developed a process for discovering new candidates of
-%% blazars (supermassive black hole at the center of an galaxy) and in my
-%% master thesis I utilized technolgies of Virual Observatory and Data
-%% Mining to find new Be stars (rare, extremely rapid rotating stars). My
-%% referees were prof. Giuseppe Longo and Dr. Massimo Brescia. They are
-%% main figures behind the DAME project, one of the most important Data
-%% Mining projects in current astrophysics and they invated us to work on
-%% common projects. Since my supevisor has two more computer science
-%% students we are now team with expertize in different ares. This
-%% multidiciplinary international collaboration will be the basis for my
-%% work. The first goal will be the implemantation of the Decision Tree
-%% algoritm in the DAME framework and its utiliztion in astrophysical
-%% research.
 
 
 
 
-Overall contribution and goals of the project:
-\begin{itemize}
- \item \vspace{-0.3cm} Set up Czech-Italian team
- \item \vspace{-0.3cm} Implement Decision Tree algoritm into DAME
- \item \vspace{-0.3cm} Use DAME on astrophysical phenomenas
+%% Overall contribution and goals of the project:
+%% \begin{itemize}
+%%  \item \vspace{-0.3cm} Set up Czech-Italian team
+%%  \item \vspace{-0.3cm} Implement Decision Tree algoritm into DAME
+%%  \item \vspace{-0.3cm} Use DAME on astrophysical phenomenas
 
-\end{itemize}
+%% \end{itemize}
 
 
 \newpage
@@ -200,7 +194,7 @@ There are two important trends in the current astronomical surveys:
     wave-bands, from gamma and X-rays, optical, infrared to radio. The
     ability to cross correlate these observations together may lead to
     new understanding of physical
-    phenomenas. \cite{hanisch2010international}
+    phenomenas \cite{hanisch2010international}.
 \end{itemize}
 
 
@@ -254,16 +248,15 @@ decentralized in their nature.
    \end{wrapfigure}
 
 
-The Architecture is depicted on the figure \ref{FigArchitecture}. The
-level of abstraction goes from top to bottom. Starting with
-interfaces, used by people or applications to discover resources.  The
-next level is the service layer implemented by standard protocols,
-followed by the hardware level where actual data are stored. This
-onion-like structure hides the complexity of the lower layer and
-provide data and meta-data to the higher layer. This concept is
-similar to TCP/IP \footnote{TCP/IP (Transmission Control
-  Protocol/Internet Protocol).  The basic communication language or
-  protocol of the Internet.}  protocol.
+The Architecture is depicted on the figure. The level of abstraction
+goes from top to bottom. Starting with interfaces, used by people or
+applications to discover resources.  The next level is the service
+layer implemented by standard protocols, followed by the hardware
+level where actual data are stored. This onion-like structure hides
+the complexity of the lower layer and provide data and meta-data to
+the higher layer. This concept is similar to TCP/IP \footnote{TCP/IP
+  (Transmission Control Protocol/Internet Protocol).  The basic
+  communication language or protocol of the Internet.}  protocol.
 
 
 
@@ -272,17 +265,19 @@ similar to TCP/IP \footnote{TCP/IP (Transmission Control
     The VO architecture is serviced oriented. Each service is
     autonomous with well defined boundaries. The very important aspect
     of VO implementation is the adoption of formats and protocols used
-    in astronomy (FITS) and Computer Science
+    in astronomy (FITS\footnote{Flexible Image Transport System is
+      the standard astronomical data format endorsed by both NASA and
+      the IAU }) and Computer Science
     (XML\,\footnote{Extensible Markup Language (XML) is a set of rules
       for encoding documents in machine-readable form.} , Web
     Service\,\footnote{method of communication between two electronic
       devices over a network.}  SOAP\,\footnote{Simple Object Access
       Protocol, is a protocol specification for exchanging structured
       information in the implementation of Web Services in computer
-      networks.},REST\footnote{Representational State Transfer (REST)
+      networks.}, REST\footnote{Representational State Transfer (REST)
       is a style of software architecture for distributed hyper-media
       systems such as the World Wide Web. Used in
-      \url{www.youtube.com} }) for many years. In other words VO does
+      \url{www.youtube.com} }) for many years. In other words, VO does
     not try to reinvent the wheel but it stands on the shoulders of
     giants.
 
@@ -295,7 +290,7 @@ dozens of different methods and algorithms. This form needs and
 opportunity for interdisciplinary cooperation with Data Mining
 experts. This can be very beneficial for both fields, providing
 astronomers with interesting methods for data analysis and computer
-scientist with the large ammout of quality data.
+scientist with the large amount of quality data.
 \paragraph{Supervised Methods}
 These methods are also known as predictive\cite{ball2010data}. They
 rely on training set with known target property. This set must be
@@ -306,7 +301,7 @@ detection and others.
 
 \paragraph{Decision Tree (DT)} is an example of supervised
 classification. Based on final number of data
-$(x^{(1)},\ldots,x^{(p)})$ with known class $C_1,\ldots, C_m$
+$(x^{(1)}, x^{(p)})$ with known class $C_1,\ldots, C_m$
 classifier is created, i.e. mapping $f$ classifying any $x \in
 \mathcal{X}, f:\mathcal{X}\rightarrow \mathcal{Y}$, where
 $\mathcal{X}$ is a set of possible input vectors and $\mathcal{Y}$ is
@@ -348,16 +343,17 @@ those classifications.
     of Technology.  DAME aims at solving in a practical way some of
     the DM problems, by offering a completely transparent
     architecture, a user-friendly interface, and the possibility to
-    seamlessy access a distributed computing infrastructure. DAME
+    seamlessly access a distributed computing infrastructure. DAME
     adopts VO standards in order to ensure the long-term
     interoperability of data; however, at the moment, it is not yet
     fully VO compliant. This is partly due to the fact that new
     standards need to be defined for data analysis, DM methods and
     algorithms development. In practice, this implies a definition of
     standards in terms of ontology and a well-defined taxonomy of
-    functionalities to be applied in the astrophysical use cases
-    \cite{brescia2011extracting}.
+    functionalities to be applied in the astrophysical use
+    cases \cite{brescia2011extracting}.  
 
+\break
 
 %\url{http://dame.dsf.unina.it/}
 
@@ -370,33 +366,33 @@ those classifications.
 
 \section{Time schedule and key milestones of the project}
 \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} \bf Academic Year & \vspace{-0.2cm} \bf Milestones \\
-{\bf{2010/2011}} &  \multirow{2}{*}{}Set up international
-interdisciplinary team.\\
-& Study DAME Architecture. 
+{\bf{2011/2012}} & \multirow{2}{*}{}Set up international
+(Czech-Italian) interdisciplinary (astrophysicists, computer
+scientists) team.\\ & Study DAME Architecture.
  \end{tabular}
-\begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2011/2012}}
-  & \vspace{-0.2cm} Implement Decision Tree into DAME.\\
-& Testing on various scientific cases. \\
-& Choosing main scientific goal. \\
+\begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2012/2013}}
+  & \vspace{-0.2cm} Implement Decision Tree into DAME.\\ & Testing on
+  various scientific cases (Study of AGN, Galaxies, Be stars). \\ &
+  Choosing main scientific goal. \\
  \end{tabular}
- \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2012/2013}}
+ \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2013/2014}}
    & \vspace{-0.2cm} Detailed analysis of chosen scientific goal.\\
  \end{tabular}
- \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2013/2014}} & \multirow{2}{*}{}Publish papers to international conferences and high impact factor international journals.\\
+ \begin{tabular}{p{2.3cm}p{12.6cm}} \vspace{-0.2cm} {\bf{2014/2015}} & \multirow{2}{*}{}Publish papers to international conferences and high impact factor international journals.\\
  & Write a PhD dissertation using the project results and related topics. \vspace{-0.2cm} 
  \end{tabular}\\
 \smallskip 
 
 
 \noindent\textbf{During the all project stages:} The applicant will
-participate in summer schools, conferences and workshops related to
-galaxy evolution and computing. Results obtained during the project
-solving will be published throughout all stages.
+participate in summer schools, conferences and workshops. Results
+obtained during the project solving will be published throughout all
+stages.
 
 
 
 \bigskip
-\newpage 
+%\newpage 
 \section{Institutions where the project will be implemented}
 
 \begin{itemize} \addtolength{\itemsep}{-0.5\baselineskip}
@@ -413,7 +409,7 @@ Home institution of supervisor
 
 \item {\bf{The Faculty of Information Technology (FIT) at Brno University of Technology}}
 
-Home institution of other PhD and bachelor students
+Home institution of other PhD and bachelor students from the team
 
 \item {\bf{Department of Physical Sciences University of Napoli - Federico II}}
 
@@ -439,10 +435,10 @@ Home institution of DAME project
 %% \end{multicols}
 
 
-
+\break
 \section{Expert consultants and their contribution to the project}
 
-\textbf{RNDr. Petr Škoda, Csc}, supervisor 
+\textbf{RNDr. Petr Škoda, CSc.}, supervisor 
 \begin{itemize}
 \item Staff researcher at Astronomical Institute of the Academy of Sciences
 \end{itemize}
@@ -451,7 +447,9 @@ Home institution of DAME project
 %%   Technology (FIT) at Brno University of Technology}.
 
 \bigskip
-\noindent \textbf{prof. Giuseppe Longo}, consultant
+\noindent \textbf{prof. Giuseppe Longo}, DAME Principal Investigator
+(PI), consultant
+\setlength{\columnsep}{-15pt}
 \begin{multicols}{2}
 \begin{itemize} \addtolength{\itemsep}{-0.5\baselineskip}
 \item University Federico II
@@ -461,17 +459,18 @@ Home institution of DAME project
 \item INAF - Napoli
 \item INFN - National Institute of Nuclear Physics
 \item INFN - Napoli
-\item RIAA - National network Astr. \& Astrophys.
+\item RIAA - National network Astr. \& Astrophysics
 \item Accademia Pontaniana
 \item International Astronomical Union
-\item Meta Institute for Computational Astrophysics.
+\item Meta Institute for Computational Astrophysics
 \item California Institute of Technology
 \end{itemize}
 \end{multicols}
 % \subsubsection*{Colaborates and consultants:}
 \bigskip
 
-\noindent \textbf{Dr. Massimo Brescia}, consultant
+\noindent \textbf{Dr. Massimo Brescia}, DAME Project Manager (PM),
+consultant
 
 \begin{itemize}\addtolength{\itemsep}{-0.5\baselineskip}
 \item Astronomer researcher at INAF OAC Napoli, since 2000
@@ -485,21 +484,22 @@ Home institution of DAME project
 \section{Relation between the applicant's project and doctoral thesis}
 The project is tightly connected with and significantly extends the
 topic of PhD thesis: \textit{Application of modern computer science in
-  astronomy}
+  astronomy}. Results will available to the public through DAME
+interface and could be used outside astrophysics field.
 
 
 \section{Motivation for solving the project}
 The searching for effective collaboration between natural and computer
-scince is one of the most important task of todays science. We are
-vitnessing the genesis of multiple x-informatics (astro, bio, etc)
+science is one of the most important task of today's science. We are
+witnessing the genesis of multiple x-informatics (astro, bio, etc)
 sciences. This multidisciplinary cooperation is vital not only for
 scientists but also for the public. The born of World Wide
 Web\footnote{Developed as documentation tool during LEP project at
   CERN} is nice example. And at the end, there is no such things like
 geology, chemistry or physics. There is just nature.
 
-% To fakt nevim, co sem napsat... Neco jako treba, ze se eliptickym galaxiim venuji uz od bakalarky, v diplomce jsem se seznamila s N-casticovymi simulacemi problematiky jejich srazek a ze chci pokracovat ve sve specializaci v ramci dnesnich usolved questions...   Ze to je skvely zpusob jak zkloubit vedeckou cinnost (studium fyzikalnich ) with computational informatics, ktera me tez bavi a zajima... ??? 
 
 
 
-\end{document}
+
+%\end{document}

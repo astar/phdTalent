@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{times}
+%\usepackage{fullpage}
+% \usepackage[colorlinks=false]{hyperref}
+\usepackage[NoDate,LabelsAligned]{currvita}
+\usepackage{array}
+\usepackage{comment}
+%\usepackage[pdftex,a4paper, total={15.3cm,23cm}, top=2.5cm, left=2.8cm, includefoot]{geometry}
+\usepackage[pdftex,a4paper, total={15.4cm,23cm}, top=3.8cm, left=2.8cm, includefoot]{geometry}
+\usepackage{fancyhdr}                           %custom footer
+\pagestyle{fancy}
+\usepackage{lettrine}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{lettrine}
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{a4wide}
+\usepackage{wrapfig}
+
+% \fancyhf{}
+\renewcommand{\headrulewidth}{5pt}
+
+\usepackage{color}
+  \usepackage[colorlinks,hyperindex,plainpages=false,pdftex, linkcolor=black,citecolor=black,urlcolor=black,pagecolor=black]{hyperref}
+  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajù kolem odkazù
+  \pdfcompresslevel=9
+
+% Better for lists with 1-2 items and short descriptions
+\newenvironment{sublist}{%
+	\begin{list}{}{%
+		\setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+		\setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+	}%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+	\begin{list}{\labelitemii}{%
+		\setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+	}%
+}%
+{ \end{list} }
+%\newcommand\uv[1]{\quotedblbase \,#1\textquotedblleft}
+
+
+% \pagestyle{empty}
+% \pagestyle{fancy}
+\hyphenation{UNIX -- Programming}
+
+\renewcommand{\headrulewidth}{5pt} % tloušťka linky
+
+% \fancyhf{} % smaže aktuální nastavení záhlaví a zápatí
+% \fancyhead[LE,RO]{\bf } 
+% \fancyhead[LO]{\bfseries\rightmark}
+% \fancyhead[RE]{\bfseries\leftmark}
+\lhead{Jaroslav Vážný}
+\rhead{{{Brno PhD Talent 2011}}}
+\renewcommand{\headrulewidth}{0.7pt} % tloušťka linky
+\renewcommand{\footrulewidth}{0pt}   % patička chybí
+\addtolength{\headheight}{0.7cm} % prostor pro záhlaví
+
+\newlength{\oldcvlabelwidth}
+\newlength{\oldcvlabelsep}
+
+
+
+
+\begin{document}
+\include{cv}
+\include{project}
+\include{supervisor}
+
+\end{document}
